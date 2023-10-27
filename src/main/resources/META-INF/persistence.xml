@@ -15,21 +15,21 @@
 
             <!-- PostgreSQL -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:postgresql://localhost:5432/testdb"/>
+                      value="jdbc:postgresql://dpg-cktivfunfb1c73dmq0fg-a.singapore-postgres.render.com:5432/clinic_xaqo"/>
 
             <!-- Credentials -->
             <property name="jakarta.persistence.jdbc.user"
-                      value="postgres"/>
+                      value="cheong"/>
             <property name="jakarta.persistence.jdbc.password"
-                      value="root"/>
+                      value="yMr1tmKBufVlwy8Ww9brPO8faxZfn2Tc"/>
 
             <!-- The Vert.x SQL Client connection pool size -->
             <property name="hibernate.connection.pool_size"
                       value="10"/>
 
             <!-- Automatic schema export -->
-<!--            <property name="jakarta.persistence.schema-generation.database.action"-->
-<!--                      value="drop-and-create"/>-->
+            <property name="jakarta.persistence.schema-generation.database.action"
+                      value="drop-and-create"/>
 
             <!-- SQL statement logging -->
             <property name="hibernate.show_sql" value="true"/>
