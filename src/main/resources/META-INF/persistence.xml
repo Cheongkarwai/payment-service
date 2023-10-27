@@ -15,7 +15,7 @@
 
             <!-- PostgreSQL -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:postgresql://dpg-cktivfunfb1c73dmq0fg-a.singapore-postgres.render.com:5432/clinic_xaqo?ssl=true"/>
+                      value="jdbc:postgresql://dpg-cktivfunfb1c73dmq0fg-a.singapore-postgres.render.com?ssl=true/clinic_xaqo"/>
 
             <!-- Credentials -->
             <property name="jakarta.persistence.jdbc.user"
