@@ -1,0 +1,74 @@
+server:
+   port: 8091
+#   ssl:
+#     enabled: true
+#     key-alias: cheong
+#     key-store: classpath:app/cheong_keystore.p12
+#     key-store-type: PKCS12
+#     key-store-password: cheong
+#     key-password: cheong
+#     protocol: TLS
+#     enabled-protocols: TLSv1.2
+#     client-auth: need
+#     trust-store: classpath:app/cheong_keystore.p12
+#     trust-store-password: cheong
+#spring:
+#  cloud:
+#    #    function:
+#    #      definition: consumerValue;processBind;consumePayment
+#    stream:
+#      bindings:
+#        #         processBind-in-0:
+#        #           destination: processor-topic
+#        #         processBind-out-0:
+#        #           destination: consumer-topic
+#        #         consumerValue-in-0:
+#        #           destination: consumer-topic
+#        orderEvent-out-0:
+#          destination: order-event
+#        orderEvent-in-0:
+#          destination: order-event
+#      output-bindings: orderEvent
+#      input-bindings: orderEvent
+#      kafka:
+#        binder:
+#          brokers: localhost:9092
+#spring:
+#  cloud:
+#    function:
+#      definition: orderEvent
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: localhost:9092
+#      bindings:
+#        orderEvent-out-0:
+#          destination: order-event
+#          producer:
+#            error-channel-enabled: true
+
+
+logging:
+  level:
+#    org.hibernate: DEBUG
+    org.springframework.web.reactive: DEBUG
+    org.springframework.cloud.config: DEBUG
+
+omise:
+  public-key: pkey_test_5xavqzup62ncv3htrnr
+  secret-key: skey_test_5xavqyhdptorp2kq9z3
+
+
+
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888/
+  application:
+    name: payment-service
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include=*:
+
